@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warner Bros|Feedback</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* Full-height layout */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Page container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
+
+        /* Main content area */
+        .content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Feedback form */
+        .feedback-form {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .feedback-form h2 {
+            margin-top: 0;
+        }
+
+        /* Form input fields */
+        .feedback-form input[type=text],
+        .feedback-form input[type=email],
+        .feedback-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        /* Form submit button */
+        .feedback-form input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Form submit button on hover */
+        .feedback-form input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        /* Thank you message */
+        .thank-you {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <img src="logo.jpeg" alt="Company Logo" width="100" height="50">
+            </div>
+            <a href="index.html">Home</a>
+            <a href="movies.html">Movies</a>
+            <a href="tvshows.html">TV Shows</a>
+            <a href="games_apps.html">Games & Apps</a>
+            <a href="collection.html">Collections</a>
+            <a href="feedback.html">Feedback</a>
+        </nav>
+
+        <!-- Main content area -->
+        <div class="content">
+            <!-- Feedback Form -->
+            <section class="feedback-form">
+                <h2>Feedback Form</h2>
+                <form id="feedbackForm" action="#" method="post">
+                    <label for="name">Your Name:</label><br>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="email">Your Email:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="message">Your Feedback:</label><br>
+                    <textarea id="message" name="message" rows="4" required></textarea><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+
+            <!-- Thank You Message -->
+            <div class="thank-you" id="thankYouMessage">
+                <h2>Thank You!</h2>
+                <p>Your feedback has been received.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Entertainment Company. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Perform form validation
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var message = document.getElementById('message').value.trim();
+
+            if (name === '' || email === '' || message === '') {
+                alert('Please fill out all fields.');
+                return;
+            }
+
+            // Simulate form submission (replace with actual submission code)
+            setTimeout(function() {
+                document.getElementById('feedbackForm').reset(); // Reset form fields
+                document.getElementById('feedbackForm').style.display = 'none'; // Hide form
+                document.getElementById('thankYouMessage').style.display = 'block'; // Show thank you message
+            }, 1000); // Simulate 1 second delay
+        });
+    </script>
+</body>
+</html>

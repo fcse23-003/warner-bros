@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warner Bros|Movies</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo.jpeg" alt="Company Logo" width="100" height="50">
+        </div>
+        <a href="index.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="tvshows.html">TV Shows</a>
+        <a href="games_apps.html">Games & Apps</a>
+        <a href="collection.html">Collections</a>
+        <a href="feedback.html">Feedback</a>
+    </nav>
+
+    <section class="slideshow">
+        <!-- Slides -->
+        <img class="slide" src="movie1.jpg" alt="Movie 1">
+        <img class="slide" src="movie2.jpg" alt="Movie 2">
+        <img class="slide" src="movie3.jpg" alt="Movie 3">
+		<img class="slide" src="movie4.jpg" alt="Movie 4">
+        
+        <!-- Navigation dots -->
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+			<span class="dot"></span>
+        </div>
+    </section>
+    <section>
+	
+	<div class="picture-container">
+        <div class="movie-card">
+            <!-- Add embedded YouTube trailer -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/EmH3eeGUbmk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Optionally, add information about the movie -->
+            <h3>Bloodline Killer</h3>
+        </div> 
+		
+		<div class="movie-card">
+            <!-- Add embedded YouTube trailer -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/nCyVDVP7eoA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Optionally, add information about the movie -->
+            <h3>Darkness of Man</h3>
+        </div>
+		
+		<div class="movie-card">
+            <!-- Add embedded YouTube trailer -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gsE6UhTURCc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Optionally, add information about the movie -->
+        </div>
+		
+		<div class="movie-card">
+            <!-- Add embedded YouTube trailer -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XtFI7SNtVpY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Optionally, add information about the movie -->
+            <h3>Kingdom of the Planet of the Apes</h3>
+        </div>
+		
+		<div class="movie-card">
+            <!-- Add embedded YouTube trailer -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/S3XjsSvwSuU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Optionally, add information about the movie -->
+            <h3>The Garfield Movie</h3>
+        </div>
+		
+		<div class="movie-card">
+            <!-- Add embedded YouTube trailer -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/pBk4NYhWNMM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Optionally, add information about the movie -->
+            <h3>Barbie</h3>
+        </div>
+
+    </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Entertainment Company. All rights reserved.</p>
+    </footer>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+</html>

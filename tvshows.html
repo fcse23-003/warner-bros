@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warner Bros|Movies</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo.jpeg" alt="Company Logo" width="100" height="50">
+        </div>
+        <a href="index.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="tvshows.html">TV Shows</a>
+        <a href="games_apps.html">Games & Apps</a>
+        <a href="collection.html">Collections</a>
+        <a href="feedback.html">Feedback</a>
+    </nav>
+
+    <section class="slideshow">
+        <!-- Slides -->
+        <img class="slide" src="tvshow1.jpg" alt="TV Show 1">
+        <img class="slide" src="tvshow2.jpg" alt="TV Show 2">
+        <img class="slide" src="tvshow3.jpg" alt="TV Show 3">
+		<img class="slide" src="tvshow4.jpg" alt="TV Show 4">
+        
+        <!-- Navigation dots -->
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+			<span class="dot"></span>
+        </div>
+    </section>
+    <section>
+	
+	<div class="picture-container">
+        <div class="movie-card">
+            <!-- Add embedded YouTube trailer -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xDc_iartATY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Optionally, add information about the movie -->
+            <h3>Half Bad: The Bastard Son & The Devil Himself</h3>
+            <p>Movie 1 description...</p>
+        </div> 
+		
+		<div class="movie-card">
+            <!-- Add embedded YouTube trailer -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/poUq9ypynKs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Optionally, add information about the movie -->
+            <h3>13 Reasons Why</h3>
+        </div>
+		
+		<div class="movie-card">
+            <!-- Add embedded YouTube trailer -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UxOdrBoYzKg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Optionally, add information about the movie -->
+            <h3>Unlocked: A Jail Experiment</h3>
+        </div>
+		
+		<div class="movie-card">
+            <!-- Add embedded YouTube trailer -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/oLtnNw0KT78" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Optionally, add information about the movie -->
+            <h3>Queen Charlotte: A Bridgerton Story</h3>
+        </div>
+		
+		<div class="movie-card">
+            <!-- Add embedded YouTube trailer -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/E7igHLfiZN4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Optionally, add information about the movie -->
+            <h3>Styx</h3>
+        </div>
+		
+		<div class="movie-card">
+            <!-- Add embedded YouTube trailer -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Di310WS8zLk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Optionally, add information about the movie -->
+            <h3>Wednesday</h3>
+        </div>
+
+    </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Entertainment Company. All rights reserved.</p>
+    </footer>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+</html>
